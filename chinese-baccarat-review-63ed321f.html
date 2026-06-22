@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百家乐 · 信息指引 | chinese-baccarat.com</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f7fa;
+      color: #1e2a3a;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0d1b2a 0%, #1b2838 100%);
+      color: #eef2f6;
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -20%;
+      width: 140%;
+      height: 120px;
+      background: #f5f7fa;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #b0c4d9;
+      line-height: 1.7;
+    }
+
+    .hero .sub {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #8ba3be;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.2rem;
+      display: inline-block;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 1160px;
+      margin: -1rem auto 0;
+      padding: 0 1.8rem 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 信息卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+      border: 1px solid #eef1f5;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px -12px rgba(0, 20, 40, 0.12);
+      border-color: #d0dbe8;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 1rem;
+      color: #0b1a2b;
+    }
+
+    .card p {
+      color: #2f3d4f;
+      font-size: 0.96rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card .badge {
+      display: inline-block;
+      background: #e6edf6;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #1f3a57;
+      margin-top: 0.6rem;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #0066b4;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #0066b4;
+      color: #003d73;
+    }
+
+    .inline-link {
+      font-weight: 500;
+    }
+
+    /* 自然链接段落区块 */
+    .context-section {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2.2rem 2.4rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      border: 1px solid #e6ecf2;
+    }
+
+    .context-section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0b1a2b;
+      margin-bottom: 1rem;
+      letter-spacing: -0.2px;
+    }
+
+    .context-section p {
+      margin-bottom: 1rem;
+      color: #2c3a4c;
+    }
+
+    .context-section .highlight {
+      background: #f0f5fd;
+      padding: 1rem 1.5rem;
+      border-radius: 14px;
+      border-left: 4px solid #0066b4;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-mini {
+      margin: 2rem 0 1rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eaeff4;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0f263b;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: #3e4f62;
+    }
+
+    /* 按钮式提示（非点击性，仅视觉） */
+    .tip-box {
+      background: #e9f0f9;
+      border-radius: 40px;
+      padding: 0.5rem 1.5rem;
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #1f3a57;
+      margin: 0.5rem 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.1rem; }
+      .hero { padding: 3rem 1.2rem 2.8rem; }
+      .container { padding: 0 1rem 2rem; }
+      .card-grid { gap: 1.5rem; }
+      .context-section { padding: 1.6rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 0.98rem; }
+      .card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>百家乐 · 信息入口</h1>
+    <p>稳定、克制的指引页面，聚焦规则梳理与场景匹配。为不同需求的读者提供简洁、可靠的信息卡片式索引。</p>
+    <span class="sub">基于 chinese-baccarat.com 内容结构</span>
+  </header>
+
+  <main class="container">
+
+    <!-- 主视觉用途卡片 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>规则速览</h3>
+        <p>百家乐的核心逻辑围绕庄、闲、和三门结果展开。每局发牌遵循固定补牌规则，不依赖玩家决策改变流程。适合希望快速理解基础框架的读者。</p>
+        <span class="badge">标准玩法</span>
+      </div>
+      <div class="card">
+        <h3>用途定位</h3>
+        <p>作为桌面博弈游戏，百家乐常被用于休闲娱乐、概率分析练习或文化研究。网站提供清晰的规则说明与术语对照，便于查阅。</p>
+        <span class="badge">信息参考</span>
+      </div>
+      <div class="card">
+        <h3>场景适配</h3>
+        <p>线下娱乐场、线上模拟平台、教学演示等场景均适用。本站内容不涉及实时投注或财务建议，仅作规则与背景介绍。</p>
+        <span class="badge">通用场景</span>
+      </div>
+    </div>
+
+    <!-- 适合人群 + 自然链接段落 -->
+    <div class="context-section">
+      <h2>适合人群 · 稳定入口</h2>
+      <p>无论你是刚开始了解百家乐的新读者，还是希望系统梳理规则的资深爱好者，<a href="https://chinese-baccarat.com" class="inline-link">百家乐</a>页面都提供了结构化的内容模块。网站以中文呈现，术语解释与流程图结合，降低理解门槛。</p>
+      <p>对于教学研究者、文化观察者或普通兴趣用户，该站点可作为稳定的入门参考。不预设用户必须拥有博彩背景，所有概念均从基础展开。</p>
+
+      <div class="highlight">
+        <strong>▎页面说明</strong><br>
+        本站并非游戏平台或投注入口，而是围绕百家乐规则、历史、术语和常见问法整理的知识型页面。所有信息均以客观陈述为主，不包含诱导性或承诺性表述。
+      </div>
+
+      <!-- FAQ 摘要 -->
+      <div class="faq-mini">
+        <div class="faq-item">
+          <strong>百家乐需要记忆复杂规则吗？</strong>
+          <p>基本规则固定：庄、闲、和三选一，补牌由发牌规则自动决定。更多细节可参考 <a href="https://chinese-baccarat.com">百家乐</a> 中的牌例与流程图。</p>
+        </div>
+        <div class="faq-item">
+          <strong>网站内容是否实时更新？</strong>
+          <p>规则部分保持稳定，若有玩法或术语的常见问询会定期整理补充。建议以页面最新版本为准。</p>
+        </div>
+        <div class="faq-item">
+          <strong>可以用来教学吗？</strong>
+          <p>可以。内容适合作为课堂辅助材料或自学提纲，逻辑清晰且不涉及商业引导。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二个自然链接段落 + 提示 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin: 1.5rem 0;">
+      <div style="flex: 1; min-width: 240px;">
+        <p style="margin-bottom: 0.8rem;">网站架构以信息卡片为基本单位，每个模块都可独立阅读。若想直接跳转到规则章节，可使用顶部导航或页面内锚点（具体视版本而定）。</p>
+        <p>最常被访问的页面是<a href="https://chinese-baccarat.com">百家乐</a>基础规则页，其中包含补牌表与赔率说明。</p>
+      </div>
+      <div style="flex: 0 0 auto;">
+        <span class="tip-box">⏺ 建议：先读规则，再查术语</span>
+      </div>
+    </div>
+
+    <!-- 末尾简短说明 -->
+    <div style="border-top: 1px solid #dce3ec; margin: 2.5rem 0 0.5rem; padding-top: 1.8rem; font-size: 0.9rem; color: #546578;">
+      <p>本页面为 chinese-baccarat.com 的信息索引页，内容保持客观与克制。不构成任何形式的鼓励或建议，仅用作知识展示与内容导航。最后更新于近期。</p>
+    </div>
+
+  </main>
+</body>
+</html>
